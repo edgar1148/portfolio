@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- All products section -->
+
+  <section class="album py-5 bg-light">
+    <div class="container">
+      <div class="pb-3 h3 text-black text-decoration-none fs-2 text-center">Мои последние проекты</div>
+
+
+      <hr />
+
+
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+
+        {% for project in projects %}
+        
+        <div class="col-xs-6 col-md-4">
+          <div class="card shadow-sm">
+            <img class="img-fluid" alt="Responsive image" src="{{ project.image.url }}" />
+            <div class="card-body">
+              <p class="card-title text-center">
+                <a class="text-black text-decoration-none fs-4" >{{project.name|capfirst}}</a>
+              </p>
+              <p class="card-text">{{project.description|capfirst}}</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="{% url 'projects:projects-detail' project.slug %}" class="btn btn-dark"> <i class="fa-solid fa-list"></i> Подробнее</a>
+                <a href="#" class="btn btn-dark"> <i class="fa-brands fa-github fa-xl"></i>  GitHub </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+
+
+

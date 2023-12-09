@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <style>
+    .rounded-image {
+      width: 50%;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+      padding: 0.4em;
+      margin-bottom: 1em;
+      border-radius: 50%;
+    }
+  </style>
+  
+  <div class="container text-center my-5">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <img class="rounded-image" src="/media/image/about.jpg" alt="Eugene"/>
+        <h1 class="fw-light">Привет!</h1>
+        <h1 class="fw-light">Меня зовут - Евгений Екишев.</h1>
+        <p class="lead text-muted">
+            Нам навязали, что говорить о себе — некрасиво, неэтично и вообще признак невоспитанности.
+            Нам дали понять, что тексты могут писать только крутые копирайтеры.
+            Поэтому многие стесняются и не знают, как написать текст о себе, чтобы это было интересно.
+            Вместо живых осмысленных текстов на сайтах компаний висит одно и то же:
+            про команду профессионалов, про широкий спектр услуг и комфортные условия.
+            Иляна Агеева рассказывает, что нам мешает писать о себе и какие маяки и советы помогут таки это сделать.
+            Вы знаете, что можете без помощи копирайтера писать о себе так, что люди ахнут?
+            Но вам мешают причины, из-за которых вы пока не рассказали свою историю.
+        </p>
+        <div class="col">
+                        <div class="row p-4">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                <a href="https://github.com/edgar1148" class="btn btn-dark"> <i class="fa-brands fa-github fa-xl"></i> GitHub</a>
+                                <a href="#" class="btn btn-dark"> <i class="fa-brands fa-linkedin fa-xl"></i> Linkedin</a>
+                                <a href="https://t.me/EvgenyEkishev" class="btn btn-dark"> <i class="fa-brands fa-telegram fa-xl"></i> Telegram</a>
+                                <a href="https://vk.com/edgar1148" class="btn btn-dark"> <i class="fa-brands fa-vk fa-xl"></i> VK</a>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

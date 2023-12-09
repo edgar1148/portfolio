@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+  <style>
+    .rounded-image {
+      width: 9 0%;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+      padding: 0.4em;
+      margin-bottom: 1em;
+    }
+  </style>
+  
+  <div class="container text-center my-5">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <img class="rounded-image" src="{{projects.image.url}}" alt="Eugene"/>
+        <h1 class="fw-light">{{ projects.name }}</h1>
+        <p class="lead text-muted">
+            {{ projects.description }}
+        </p>
+        <div class="col">
+            <div class="row p-4">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <a href="https://github.com/edgar1148" class="btn btn-dark"> <i class="fa-brands fa-github fa-xl"></i> GitHub</a>
+                    <a href="#" class="btn btn-dark"> <i class="fa-brands fa-linkedin fa-xl"></i> Linkedin</a>
+                    <a href="https://t.me/EvgenyEkishev" class="btn btn-dark"> <i class="fa-brands fa-telegram fa-xl"></i> Telegram</a>
+                    <a href="https://vk.com/edgar1148" class="btn btn-dark"> <i class="fa-brands fa-vk fa-xl"></i> VK</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}
